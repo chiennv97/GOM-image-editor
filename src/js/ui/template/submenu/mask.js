@@ -1,10 +1,12 @@
 export default () => (`
     <ul class="tui-image-editor-submenu-item" style="overflow: auto; height: 100%" id="change-scroll">
         <li>
-            <img id="background1" src="../../../../src/image/background.jpg" alt="" style="width: 150px; padding: 3px">
+            <img id="background1" src="../../../../src/image/background-demo.png"
+            alt="" style="width: 150px; padding: 3px">
         </li>
         <li>
-            <img id="background2" src="../../../../src/image/background2.jpg" alt="" style="width: 150px; padding: 3px">
+            <img id="background2" src="../../../../src/image/background2-demo.png"
+            alt="" style="width: 150px; padding: 3px">
         </li>
         <li>
             <img id="background3" src="../../../../src/image/background3.jpg" alt="" style="width: 150px; padding: 3px">
@@ -24,7 +26,7 @@ export default () => (`
                         <use xlink:href="../dist/svg/icon-c.svg#icon-c-ic-mask-load" class="active"/>
                     </svg>
                 </div>
-                <label> Load Mask Image </label>
+                <label> Load Image </label>
             </div>
         </li>
     </ul>

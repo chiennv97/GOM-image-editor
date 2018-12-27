@@ -403,7 +403,8 @@ class Ui {
     _addLoadEvent() {
         snippet.forEach(this._els.load, element => {
             element.addEventListener('change', event => {
-                console.log(event);
+                // console.log(event);
+                this._actions.main.load(event.target.files[0]);
                 // this._actions.main.loadImageTemplate('http://localhost:8080/src/image/background.jpg');
             });
         });

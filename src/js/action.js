@@ -217,7 +217,7 @@ Goes Here!`,
                 textComp.add(`2018`,
                     {position: {x: 248,
                         y: 181},
-                    styles: {fill: '#ff6518',
+                    styles: {fill: '#ff4040',
                         fontSize: 57,
                         fontFamily: 'Noto Sans'}
                     }).then(() => {});
@@ -232,6 +232,44 @@ REPORT`,
                 }).then(() => {});
                 this._graphics.addImageObjectZoom('http://localhost:8080/src/image/logo.png',
                     619, 381, 0.6, 0.6);
+            },
+            setElementTemplate2: () => {
+                const textComp = this._graphics.getComponent('TEXT');
+                // console.log('ko');
+                // const sologan = `Amazing Sologan
+                // Goes Here!`;
+                textComp.add(`Amazing Sologan
+Goes Here!`,
+                {position: {x: 19,
+                    y: 45},
+                styles: {fill: '#ffffff',
+                    fontSize: 17,
+                    fontFamily: 'Noto Sans'}
+                }).then(() => {});
+
+                textComp.add(`2018`,
+                    {position: {x: 174,
+                        y: 266},
+                    styles: {fill: '#ff4040',
+                        fontSize: 57,
+                        fontFamily: 'Noto Sans'}
+                    }).then(() => {});
+
+                textComp.add(`ANNUAL
+REPORT`,
+                {position: {x: 155,
+                    y: 333},
+                styles: {fill: '#545454',
+                    fontSize: 42,
+                    fontFamily: 'Noto Sans'}
+                }).then(() => {});
+                textComp.add(`LOGO`,
+                    {position: {x: 34,
+                        y: 598},
+                    styles: {fill: '#ffffff',
+                        fontSize: 22,
+                        fontFamily: 'Noto Sans'}
+                    }).then(() => {});
             }
         }, this._commonAction());
     },

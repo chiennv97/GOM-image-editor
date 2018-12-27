@@ -1,5 +1,5 @@
 import Submenu from './submenuBase';
-import util from '../util';
+// import util from '../util';
 import templateHtml from './template/submenu/mask';
 /**
  * Mask ui class
@@ -54,6 +54,7 @@ class Mask extends Submenu {
             actions.main.loadImageTemplate('http://localhost:8080/src/image/background2.jpg');
             this.removeAllBorder();
             this.setBorder('#background2');
+            actions.main.setElementTemplate2();
         });
         this._els.background3.addEventListener('click', () => {
             actions.main.loadImageTemplate('http://localhost:8080/src/image/background3.jpg');
@@ -93,20 +94,21 @@ class Mask extends Submenu {
      * @private
      */
     _loadMaskFile(event) {
-        let imgUrl;
-
-        if (!util.isSupportFileApi()) {
-            alert('This browser does not support file-api');
-        }
-
-        const [file] = event.target.files;
-
-        if (file) {
-            imgUrl = URL.createObjectURL(file);
-            // this.actions.setTypeIconOrBackground(1);
-            this.actions.loadImageFromURL(imgUrl, file);
-            // this._els.applyButton.classList.add('active');
-        }
+        this.bigActions.main.load(event.target.files[0]);
+        // let imgUrl;
+        //
+        // if (!util.isSupportFileApi()) {
+        //     alert('This browser does not support file-api');
+        // }
+        //
+        // const [file] = event.target.files;
+        //
+        // if (file) {
+        //     imgUrl = URL.createObjectURL(file);
+        //     // this.actions.setTypeIconOrBackground(1);
+        //     this.actions.loadImageFromURL(imgUrl, file);
+        //     // this._els.applyButton.classList.add('active');
+        // }
     }
 }
 
