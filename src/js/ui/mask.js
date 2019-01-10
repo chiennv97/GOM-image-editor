@@ -45,24 +45,24 @@ class Mask extends Submenu {
         // const self = this;
         // this._els.maskImageButton.addEventListener('change', this._loadMaskFile.bind(this));
         this._els.background1.addEventListener('click', () => {
-            actions.main.loadImageTemplate('http://localhost:8080/src/image/background.jpg');
+            actions.main.loadImageTemplate('assets/img/background.jpg');
             this.removeAllBorder();
             this.setBorder('#background1');
             actions.main.setElementTemplate1();
         });
         this._els.background2.addEventListener('click', () => {
-            actions.main.loadImageTemplate('http://localhost:8080/src/image/background2.jpg');
+            actions.main.loadImageTemplate('assets/img/background2.jpg');
             this.removeAllBorder();
             this.setBorder('#background2');
             actions.main.setElementTemplate2();
         });
         this._els.background3.addEventListener('click', () => {
-            actions.main.loadImageTemplate('http://localhost:8080/src/image/background3.jpg');
+            actions.main.loadImageTemplate('assets/img/background3.jpg');
             this.removeAllBorder();
             this.setBorder('#background3');
         });
         this._els.background4.addEventListener('click', () => {
-            actions.main.loadImageTemplate('http://localhost:8080/src/image/background4.jpg');
+            actions.main.loadImageTemplate('assets/img/background4.jpg');
             this.removeAllBorder();
             this.setBorder('#background4');
         });

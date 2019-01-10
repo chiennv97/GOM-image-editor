@@ -1,0 +1,14 @@
+fix lỗi:
+https://github.com/nhnent/tui.image-editor/issues/46
+npm install --no-save --no-optional fabric@~1.6.7
+
+Can't resolve 'Fabric/fabric.require' in node_modules.:
+    "Fixed" the problem by replacing
+    HTTP = require("http"), HTTPS = require("https")
+    into
+    HTTP = require("@angular/http"), HTTPS = require("@angular/http") in the fabric.require.js file.
+
+sửa code rồi chạy bằng lệnh: npm run serve
+xuất ra file js: npm run bundle
+sẽ xuất ra folder dist
+copy vào node_module của project cần dùng editor này

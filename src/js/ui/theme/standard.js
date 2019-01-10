@@ -134,7 +134,7 @@
 };
  */
 export default {
-    'common.bi.image': 'http://localhost:8080/src/image/editor-logo.png',
+    'common.bi.image': 'assets/img/editor-logo.png',
     'common.bisize.width': '210px',
     'common.backgroundImage': 'none',
     'common.backgroundColor': '#1e1e1e',

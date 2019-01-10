@@ -109,6 +109,8 @@ export default {
             },
             download: () => {
                 const dataURL = this.toDataURL();
+                // console.log(dataURL);
+                localStorage.setItem('imageData', dataURL);
                 let imageName = this.getImageName();
                 let blob, type, w;
 
@@ -118,7 +120,9 @@ export default {
                     if (imageName.split('.').pop() !== type) {
                         imageName += `.${type}`;
                     }
-                    saveAs(blob, imageName); // eslint-disable-line
+                    // console.log(blob);
+                    // localStorage.setItem('imageBlob', blob);
+                    // saveAs(blob, imageName); // eslint-disable-line
                 } else {
                     w = window.open();
                     w.document.body.innerHTML = `<img src='${dataURL}'>`;
@@ -230,7 +234,7 @@ REPORT`,
                     fontSize: 42,
                     fontFamily: 'Noto Sans'}
                 }).then(() => {});
-                this._graphics.addImageObjectZoom('http://localhost:8080/src/image/logo.png',
+                this._graphics.addImageObjectZoom('assets/img/logo.png',
                     619, 381, 0.6, 0.6);
             },
             setElementTemplate2: () => {
